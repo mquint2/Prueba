@@ -1,0 +1,17 @@
+# Spring LDAP - CRUD Operations Binding and Unbinding
+
+spring:
+  ldap:
+
+    # Spring LDAP
+    #
+    # In this example we use an embedded ldap server. When using a real one,
+    # you can configure the settings here.
+    #
+
+
+     urls: ${LDAP_EXT_ENDPOINT}
+     base: ${LDAP_EXT_BASE}
+     username: ${LDAP_EXT_USERNAME}
+     password: ${LDAP_EXT_PASSWORD}
+
