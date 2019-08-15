@@ -15,6 +15,4 @@ USER root
 RUN keytool -importcert -alias banbta-RootCA -keystore "${JAVA_HOME}/jre/lib/security/cacerts" -noprompt -storepass changeit -file "banbta-RootCA.cer"
 RUN keytool -importcert -alias BANBTA-CA-EMISORA -keystore "${JAVA_HOME}/jre/lib/security/cacerts" -noprompt -storepass changeit -file "BANBTA-CA-EMISORA.cer"
 RUN keytool -importcert -alias zeuspext01 -keystore "${JAVA_HOME}/jre/lib/security/cacerts" -noprompt -storepass changeit -file "zeuspext01.cer"
-#RUN keytool -importcert -alias zeuspext01 -keystore "//usr/local/openjdk-8/jre/lib/security/cacerts" -noprompt -storepass changeit -file "/zeuzCert/zeuspext01.cer"
-#ENV JAVA_OPTS="-Xmx150m -Xmx75m"
-CMD ["java", "Xms75m", "Xmx150m", "-jar", "WsRestDataGestionUsuarioLDAP-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "WsRestDataGestionUsuarioLDAP-0.0.1-SNAPSHOT.jar"]
